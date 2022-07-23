@@ -126,9 +126,9 @@ export default class FoodBox extends Component {
     });
     let fruitObj = {
       id: event.target.value,
-      text: `${count} X ${event.target.value} = ${cal[0].calories * count}`,
+      text: `${count} X ${event.target.value} = ${cal[0].calories * count} cal`,
       btn_id: `${event.target.value}R`,
-      calorieCount: cal[0].calories * count,
+      calo: cal[0].calories * count,
     };
     this.setState({
       myFruits: this.state.myFruits.concat(fruitObj),
@@ -141,7 +141,7 @@ export default class FoodBox extends Component {
       return `${fruit.id}R` === event.target.value;
     });
     this.setState({
-      calories_count: this.state.calories_count - calorie[0].calorieCount,
+      calories_count: this.state.calories_count - calorie[0].calo,
     });
   };
   render() {
@@ -178,7 +178,7 @@ export default class FoodBox extends Component {
                         min="0"
                       />
                       <button onClick={this.addFruit} value={fruit.name}>
-                      &#x2B;
+                        &#x2B;
                       </button>
                     </div>
                   </div>
@@ -186,7 +186,9 @@ export default class FoodBox extends Component {
               })}
           </div>
           <div className="right">
-            <h1>Today's Food <span>{this.state.calories_count} Calories</span></h1>
+            <h1>
+              Today's Food <span>{this.state.calories_count} Calories</span>
+            </h1>
             {this.state.myFruits
               .filter((fruit) => {
                 return fruit.text !== "";
@@ -194,9 +196,9 @@ export default class FoodBox extends Component {
               .map((fruit) => {
                 return (
                   <div key={fruit.id} className="item" id={fruit.btn_id}>
-                    <span>{fruit.text} cal</span>
+                    <span>{fruit.text}</span>
                     <button onClick={this.removeFruit} value={fruit.btn_id}>
-                    &#10006;
+                      &#10006;
                     </button>
                   </div>
                 );

@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lab-react-pronutrition/static/css/main.5defbf56.css",
-    "main.js": "/lab-react-pronutrition/static/js/main.eebdef82.js",
+    "main.js": "/lab-react-pronutrition/static/js/main.6ba8bf1d.js",
     "index.html": "/lab-react-pronutrition/index.html",
     "main.5defbf56.css.map": "/lab-react-pronutrition/static/css/main.5defbf56.css.map",
-    "main.eebdef82.js.map": "/lab-react-pronutrition/static/js/main.eebdef82.js.map"
+    "main.6ba8bf1d.js.map": "/lab-react-pronutrition/static/js/main.6ba8bf1d.js.map"
   },
   "entrypoints": [
     "static/css/main.5defbf56.css",
-    "static/js/main.eebdef82.js"
+    "static/js/main.6ba8bf1d.js"
   ]
 }

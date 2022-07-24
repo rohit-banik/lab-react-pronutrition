@@ -113,7 +113,7 @@ export default class FoodBox extends Component {
   }
   searchFruit = (event) => {
     this.setState({
-      searchTxt: event.target.value,
+      searchTxt: event.target.value.toLowerCase(),
     });
   };
   capatalize = (name) => {
